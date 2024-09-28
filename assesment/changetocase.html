@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Case Converter</title>
+    <style>
+        button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Text Case Converter</h2>
+
+    <input type="text" id="inputWord" placeholder="Enter a word" />
+    <br><br>
+    <button onclick="toUpperCase()">Upper Case</button>
+    <button onclick="toLowerCase()">Lower Case</button>
+    <button onclick="toSwapCase()">Swap Case</button>
+
+    <p>Result: <span id="result"></span></p>
+
+    <script>
+        function toUpperCase() {
+            let word = document.getElementById('inputWord').value;
+            document.getElementById('result').innerText = word.toUpperCase();
+        }
+
+        function toLowerCase() {
+            let word = document.getElementById('inputWord').value;
+            document.getElementById('result').innerText = word.toLowerCase();
+        }
+
+        function toSwapCase() {
+            let word = document.getElementById('inputWord').value;
+            let swapCaseWord = word.split('').map(function(char) {
+                return char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase();
+            }).join('');
+            document.getElementById('result').innerText = swapCaseWord;
+        }
+    </script>
+</body>
+</html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 

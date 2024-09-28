@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Shop</title>
+    <script>
+        var data = [
+            {
+                "ID": 1,
+                "NAME": "Pulsar-150",
+                "DESCRIPTION": "Good in Mileage",
+                "RATE": "110000"
+            },
+            {
+                "ID": 2,
+                "NAME": "X-Pulse-200",
+                "DESCRIPTION": "Offroad Rider",
+                "RATE": "190000"
+            },
+            {
+                "ID": 3,
+                "NAME": "Royal Enfield-350",
+                "DESCRIPTION": "Hills Rider",
+                "RATE": "250000"
+            }
+        ];
+        document.write("<table border='5'><tr>");
+        for (var key in data[0]) {
+            document.write('<th>' + key + '</th>');
+        }
+        document.write("</tr>");
+        for (var i = 0; i < data.length; i++) {
+            document.write('<tr>');
+            for (var property in data[i]) {
+                document.write('<td>' + data[i][property] + '</td>');
+            }
+            document.write('</tr>');
+        }
+        document.write("</table>");
+    </script>
+</head>
+<body>
+</body>
+</html>
